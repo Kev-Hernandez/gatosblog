@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Gatos Accesible</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="/css/styles.css" rel="stylesheet">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark" role="navigation">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio" aria-label="Ir a la página principal del Blog de Gatos">Blog de Gatos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio" aria-label="Ir al inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#consejos" aria-label="Ir a la sección de consejos">Consejos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto" aria-label="Ir a la sección de contacto">Contacto</a></li>
+                </ul>
+                <div class="d-flex ms-lg-3">
+                    <button class="btn btn-outline-light me-2" onclick="toggleContrast()" aria-label="Activar/Desactivar modo de alto contraste">Alto Contraste</button>
+                    <button class="btn btn-outline-light me-2" onclick="adjustFontSize(1)" aria-label="Aumentar el tamaño de la fuente">A+</button>
+                    <button class="btn btn-outline-light" onclick="adjustFontSize(-1)" aria-label="Disminuir el tamaño de la fuente">A-</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+    <header id="inicio">
+        <div class="container">
+            <h1>Bienvenidos a mi Blog de Gatos</h1>
+            <p>Un lugar dedicado a los amantes de los gatos, donde encontrarás consejos, historias y curiosidades sobre estos adorables felinos.</p>
+        </div>
+    </header>
+
+    
+    <section id="consejos" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Consejos para el Cuidado de tus Gatos</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card" role="article">
+                        <img src="/img/gatocomiendo.jpg" class="card-img-top" alt="Gato comiendo alimento balanceado" />
+                        <div class="card-body">
+                            <h5 class="card-title">Alimentación Saludable</h5>
+                            <p class="card-text">Proporciona comida de calidad y balanceada para mantener su salud y energía.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card" role="article">
+                        <img src="/img/aguagato.jpg" class="card-img-top" alt="Gato bebiendo agua" />
+                        <div class="card-body">
+                            <h5 class="card-title">Hidratación Constante</h5>
+                            <p class="card-text">Asegúrate de que siempre tengan agua limpia y fresca disponible.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card" role="article">
+                        <img src="/img/gatovet.jpg" class="card-img-top" alt="Visita al veterinario" />
+                        <div class="card-body">
+                            <h5 class="card-title">Chequeos Regulares</h5>
+                            <p class="card-text">Lleva a tu gato al veterinario al menos una vez al año para asegurar su bienestar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="contacto" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <p class="text-center">¿Tienes preguntas o quieres compartir tu experiencia con gatos? ¡Escríbenos!</p>
+            <form class="row g-3" aria-labelledby="contact-form">
+                <div class="col-md-6">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input type="text" id="nombre" class="form-control" placeholder="Tu nombre" required aria-describedby="nombre-description">
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Correo Electrónico:</label>
+                    <input type="email" id="email" class="form-control" placeholder="Tu correo" required aria-describedby="email-description">
+                </div>
+                <div class="col-12">
+                    <label for="mensaje" class="form-label">Mensaje:</label>
+                    <textarea id="mensaje" class="form-control" rows="5" placeholder="Tu mensaje" required aria-describedby="mensaje-description"></textarea>
+                </div>
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary" aria-label="Enviar formulario">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Blog de Gatos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    
+    <script src="/js/scripts.js"></script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
